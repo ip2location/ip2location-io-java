@@ -12,6 +12,11 @@ Pre-requisite
 IntelliJ IDEA
 
 
+Installation
+============
+https://central.sonatype.com/artifact/com.ip2location/ip2location-io-java/
+
+
 Usage Example
 ============
 ### Lookup IP Address Geolocation Data
