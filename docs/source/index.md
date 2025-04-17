@@ -4,6 +4,8 @@ This Java library enables user to query for an enriched data set, such as countr
 
 In addition, this module provides WHOIS lookup api that helps users to obtain domain information, WHOIS record, by using a domain name. The WHOIS API returns a comprehensive WHOIS data such as creation date, updated date, expiration date, domain age, the contact information of the registrant, mailing address, phone number, email address, nameservers the domain is using and much more.
 
+There is also a Hosted Domain API that allowing users to get the list of hosted domain names by IP address in real time. The REST API supports both IPv4 and IPv6 address lookup.
+
 This module requires API key to function. You may sign up for a free API key at https://www.ip2location.io/pricing.
 
 ## Table of contents

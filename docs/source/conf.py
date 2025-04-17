@@ -6,7 +6,7 @@
 # -- Project information
 
 project = 'IP2Location.io Java SDK'
-copyright = '2024, IP2Location'
+copyright = '2025, IP2Location'
 author = 'IP2Location'
 
 release = '1.0.0'
@@ -46,7 +46,7 @@ myst_enable_extensions = [
 # https://myst-parser.readthedocs.io/en/latest/configuration.html#setting-html-metadata
 myst_html_meta = {
     "description": "IP2Location.io Java library allows user to query for an enriched data set based on IP address and provides WHOIS lookup api that helps users to obtain domain information.",
-    "keywords": "IP2Location, Geolocation, IP location, Java, WHOIS, domain",
+    "keywords": "IP2Location, Geolocation, IP location, Java, WHOIS, domain, hosted domain",
     "google-site-verification": "DeW6mXDyMnMt4i61ZJBNuoADPimo5266DKob7Z7d6i4",
 }
 
@@ -75,4 +75,4 @@ html_favicon = 'images/favicon-32x32.png'
 
 html_title = "IP2Location.io Java SDK"
 
-# html_baseurl = "https://ip2location-io-go.readthedocs.io/en/latest/"
+# html_baseurl = "https://ip2location-io-java.readthedocs.io/en/latest/"

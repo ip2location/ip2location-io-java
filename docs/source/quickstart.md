@@ -92,3 +92,19 @@ DomainWhois whois = new DomainWhois(config);
 // Get domain extension (gTLD or ccTLD) from URL or domain name
 System.out.println(whois.toDomainExtension("example.com"));
 ```
+
+### Get Hosted Domain List
+
+You can get the domains hosted within the IP using following codes:
+
+```java
+// Configures IP2Location.io API key
+Configuration config = new Configuration();
+String apiKey = "YOUR_API_KEY";
+config.setApiKey(apiKey);
+HostedDomain hd = new HostedDomain(config);
+
+// Lookup ip address hosted domains data
+JsonObject myObj = hd.Lookup("8.8.8.8");
+System.out.println(myObj);
+```

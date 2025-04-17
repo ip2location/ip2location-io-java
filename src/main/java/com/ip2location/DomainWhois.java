@@ -14,11 +14,11 @@ import com.google.gson.*;
 /**
  * This class performs the lookup of WHOIS data from a domain by querying the IP2WHOIS API.
  * <p>
- * Copyright (c) 2002-2023 IP2Location.com
+ * Copyright (c) 2002-2025 IP2Location.com
  * <p>
  *
  * @author IP2Location.com
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 public class DomainWhois {

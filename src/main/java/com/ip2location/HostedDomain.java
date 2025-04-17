@@ -1,5 +1,8 @@
 package com.ip2location;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
@@ -7,10 +10,8 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.concurrent.CompletableFuture;
 
-import com.google.gson.*;
-
 /**
- * This class performs the lookup of geolocation data from an IP address by querying the IP2Location.io API.
+ * This class performs the lookup of hosted domains data from an IP address by querying the IP2Location.io API.
  * <p>
  * Copyright (c) 2002-2025 IP2Location.com
  * <p>
@@ -19,11 +20,11 @@ import com.google.gson.*;
  * @version 1.1.0
  */
 
-public class IPGeolocation {
-    private static final String BASE_URL = "https://api.ip2location.io/";
+public class HostedDomain {
+    private static final String BASE_URL = "https://domains.ip2whois.com/domains";
     private static final String SOURCE = "sdk-java-iplio";
     private static final String FORMAT = "json";
-    private static final String ERROR = "IPGeolocation lookup error.";
+    private static final String ERROR = "HostedDomain lookup error.";
     private final Configuration configuration;
 
     /**
@@ -31,31 +32,31 @@ public class IPGeolocation {
      *
      * @param config The Configuration object.
      */
-    public IPGeolocation(Configuration config) {
+    public HostedDomain(Configuration config) {
         configuration = config;
     }
 
     /**
-     * This function to query IP2Location.io geolocation data.
+     * This function to query IP2Location.io hosted domains data.
      *
      * @param ip IP Address you wish to query
-     * @return IP2Location.io geolocation data
+     * @return IP2Location.io hosted domains data
      * @throws Exception If parameters are incorrect or API call failed.
      */
     public JsonObject Lookup(String ip) throws Exception {
-        return Lookup(ip, "");
+        return Lookup(ip, 1);
     }
 
     /**
-     * This function to query IP2Location.io geolocation data.
+     * This function to query IP2Location.io hosted domains data.
      *
      * @param ip       IP Address you wish to query
-     * @param language The translation language
-     * @return IP2Location.io geolocation data
+     * @param page The page of the result
+     * @return IP2Location.io hosted domains data
      * @throws Exception If parameters are incorrect or API call failed.
      */
-    public JsonObject Lookup(String ip, String language) throws Exception {
-        String url = BASE_URL + "?format=" + FORMAT + "&source=" + SOURCE + "&source_version=" + configuration.getVersion() + "&key=" + configuration.getApiKey() + "&ip=" + URLEncoder.encode(ip, "UTF-8") + "&lang=" + URLEncoder.encode(language, "UTF-8");
+    public JsonObject Lookup(String ip, int page) throws Exception {
+        String url = BASE_URL + "?format=" + FORMAT + "&source=" + SOURCE + "&source_version=" + configuration.getVersion() + "&key=" + configuration.getApiKey() + "&ip=" + URLEncoder.encode(ip, "UTF-8") + "&page=" + page;
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI(url))
                 .GET()
