@@ -16,7 +16,7 @@ import com.google.gson.*;
  * <p>
  *
  * @author IP2Location.com
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 public class IPGeolocation {

@@ -7,11 +7,11 @@ package com.ip2location;
  * <p>
  *
  * @author IP2Location.com
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 public class Configuration {
-    private static final String VERSION = "1.1.0";
+    private static final String VERSION = "1.1.1";
     private String apiKey = "";
 
     public String getVersion() {
